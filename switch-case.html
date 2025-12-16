@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case</title>
+</head>
+<body>
+    <script>
+        let option= prompt('Enter Your Option \n a. Volume Of Cuboid \n b. Perimeter Of Square \n c. Smallest of Two Numbers \n d. Positive and Negative Number \n e. Biggest of Three Numbers')
+
+        switch(option){
+            case "a":
+                let l= prompt('Enter l value:')
+                let b= prompt('Enter b value:')
+                let h= prompt('Enter h value:')
+                let ans= l*b*h
+                console.log(`Volume of Cuboid (l * b * h) = ${ans}`)
+                break
+
+            case "b":
+                let a= prompt('Enter the value of a:')
+                let answer= 4*a
+                console.log(`Perimeter Of Square (4*a) = ${answer}`)
+                break
+                
+            case "c":
+                // debugger
+                let num_1= Number(prompt(`Enter number 1:`))
+                let num_2= Number(prompt(`Enter number 2:`))
+                let result= (num_1 < num_2)? `${num_1} is Small than ${num_2}` : `${num_2} is Small than ${num_1}`
+                console.log(result)
+                break
+
+            case "d":
+                let n1= Number(prompt('Enter Your Number:'))
+                if(n1>0){
+                    console.log(`${n1} is Positive Number`)
+                }
+                else if (n1==0){
+                    console.log(`${n1} is Zero`)   
+                }
+                else{
+                    console.log(`${n1} is Negative Number`)    
+                }
+                break
+
+            case "e":
+                let x= Number(prompt(`Enter number 1:`))
+                let y= Number(prompt(`Enter number 2:`))
+                let z= Number(prompt(`Enter number 3:`))
+                // debugger
+                if(x>y && x>z){
+                    console.log(`${x} is Greater`);
+                }
+                else if(y>x && y>z){
+                    console.log(`${y} is Greater`);
+                }
+                else{
+                    console.log(`${z} is Greater`);
+                }
+        }
+    </script>
+</body>
+</html>
