@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Loop</title>
+</head>
+<body>
+    <script>
+        let option= Number(prompt('Enter Your Option: \n 1. Odd Or Even \n 2. Increment of 5 \n 3. Sum Of Digits'))
+
+        switch(option){
+            case 1:
+                let i=10
+                while(i>=1){
+                    if(i%2==0){
+                        console.log(`${i} Suba`)
+                    }
+                    else{
+                        console.log(`${i} Kamali`)
+                    }
+                    i--
+                }
+                break
+
+            case 2:
+                let a=0
+                while(a<=100){
+                    console.log(`${a} - is Multiple of 5`)
+                    a+=5
+                }
+                break
+
+            case 3:
+                let num= Number(prompt('Enter 3 Digits:'))
+                console.log(`Your Number - ${num}`)
+                let sum=0
+                while(num){
+                    let x= Math.floor(num%10)
+                    let y= num/10
+                }
+
+
+
+
+
+                // let y= Math.floor(num/10)
+                // let x= Math.floor(num%10)
+                // let z= Math.floor(y%10)
+                // let w= Math.floor(y/10)
+                // console.log(x+z+w)
+                break
+        }
+    </script>
+</body>
+</html>

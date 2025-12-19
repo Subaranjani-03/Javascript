@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Task</title>
+</head>
+<body>
+    <script>
+        let name, phone, account_no = ''
+        let balance= 0
+        let exit = true
+        while(exit){
+        let option= prompt('Select Your Option: \n a. Account Creation \n b. Deposit \n c. Withdraw \n d. Check Balance \n e. Exit The Process')
+
+        switch(option){
+            case 'a':
+                name= prompt('Enter Your Name:')
+                phone= prompt('Enter Your Mobile Number:')
+                account_no= prompt('Enter Your Account Number:')
+                balance= parseFloat(prompt('Enter Initial Amount:'))
+                alert('Your Account Has Been Created Successfully!!')
+                break
+
+            case 'b':
+                let acc_no= prompt('Enter Your Account Number:')
+                if(acc_no === account_no){
+                    let deposit= parseFloat(prompt('How Much Amount Do You Want To Deposit?'))
+                    balance += deposit
+                    alert(`Rs.${deposit} Deposited Successfully!`)
+                }
+                else{
+                    alert('Your Account Number Is Incorrect, Plese Enter Valid Account Number!')
+                }
+                break
+
+            case 'c':
+                let acc= prompt('Enter Your Account Number:')
+                if(acc === account_no){
+                    let withdraw= parseFloat(prompt('How Much Amount Do You Want To Withdraw?'))
+                    if(withdraw>balance){
+                        alert('Insufficient Balance In Your Account!')
+                    }
+                    else{
+                        balance -= withdraw
+                        alert(`Rs.${withdraw} Withdraw Successfully!`)
+                    }
+                }
+                else{
+                    alert('Your Account Number Is Incorrect, Plese Enter Valid Account Number!')
+                }
+                break
+
+
+            case 'd':
+                console.log('------- Your Statement --------')
+                console.log(`Name - ${name}`)
+                console.log(`Phone Number - ${phone}`)
+                console.log(`Account Number - ${account_no}`)
+                console.log(`Balance - ${balance}`)
+                break
+            
+            case 'e':
+               exit = false 
+        }    
+        }
+    </script>
+</body>
+</html>

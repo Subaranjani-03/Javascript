@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cake Shop Using Loop</title>
+  </head>
+  <body>
+    <script>
+      let name = "";
+      let price = 0;
+      let stock = 0;
+      let sales = 0;
+      let exit = true;
+      while (exit) {
+        let option = prompt(
+          "Welcome To Suba's Cake Shop \n\nEnter Your Option: \n 1. Create Stock \n 2. Re-Stock \n 3. Sales \n 4. Accounts \n 5. Exit"
+        );
+
+        switch (option) {
+          case "1":
+            name = prompt("Enter Cake Name:");
+            price = parseFloat(prompt("Enter Price:"));
+            stock = Number(prompt("Enter Stock Count:"));
+            alert(
+              `--------------------\nProduct - ${name} \nPrice - ${price} \nStock - ${stock} \n--------------------`
+            );
+            break;
+          case "2":
+            let cake = prompt("Enter Cake Name:");
+            if (cake == name) {
+              let re_stock = Number(
+                prompt("How Much Do You Want To Re-Stock?:")
+              );
+              stock += re_stock;
+              alert(`${re_stock} Cakes Re-Stocked Successfully`);
+            } else {
+              alert(
+                `The Cake Name You Entered Is Mis-Matched, Please Enter Correct Name!`
+              );
+            }
+            break;
+          case "3":
+            let prod = prompt("Enter Cake Name:");
+            if (prod == name) {
+              sales = Number(prompt("How Much Do You Want To Buy?:"));
+              if (sales > stock) {
+                alert(`Insufficient Stock!, We Have ${stock} Number Of Cakes.`);
+              } else {
+                stock -= sales;
+                let amount = sales * price;
+                alert(`${sales} Cakes Saled Successfully Costs Rs. ${amount}`);
+              }
+            } else {
+              alert(
+                `The Cake Name You Entered Is Mis-Matched, Please Enter Correct Name!`
+              );
+            }
+            break;
+          case "4":
+            let amt = sales * price;
+            console.log(
+              `--------------------\nProduct - ${name} \nPrice Per Cake - Rs.${price} \nStock - ${stock} \nSaled Stock - ${sales} \nTotal Sales - ${sales} * Rs.${price} = Rs. ${amt}\n--------------------`
+            );
+            break;
+          case "5":
+            exit = false;
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>
