@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions with For and Switch</title>
+</head>
+<body>
+    <script>
+        // debugger
+        function num(){
+            // debugger
+            document.writeln('<h2>1. Number Pattern</h2>')
+            for( let i = 1; i<=5; i++){
+            for(let j = 1; j<=i; j++){
+                document.writeln(j)
+            }
+            document.writeln('<br>')
+        }
+        }
+
+        function initial(){
+            document.writeln('<h2>2. Initial Pattern</h2>')
+            for( let i = 5; i>=1; i--){
+            for(let j = 1; j<=i; j++){
+                document.writeln('R')
+            }
+            document.writeln('<br>')
+        }
+        }
+
+        function diagonal(){
+            document.writeln('<h2>3. Diagonal Pattern</h2>')
+            for( let i = 1; i<=5; i++){
+            for(let j = 1; j<=5; j++){
+                if((i == 1 || i == 5 || j == 1 || j == 5 ) || (i == 2 && j == 4) || (i == 3 && j == 3)|| (i == 4 && j == 2)){
+                    document.writeln('*')
+                }
+                else{
+                    document.writeln('&nbsp;&nbsp;')
+                }
+            }
+            document.writeln('<br>')
+        }
+        }
+
+        function star(){
+            document.writeln('<h2>4. Star Pattern</h2>')
+            for( let i = 1; i<=4; i++){
+            for(let j = 1; j<=4; j++){
+
+                if((i==1 || i==4) && j==3){
+                    document.writeln('*')
+                }
+                else if((i==2|| i==3) && j<=5){
+                    document.writeln('*&nbsp;')
+
+                }
+                else{
+                    document.writeln('&nbsp;&nbsp;')
+                }
+            }
+            document.writeln('<br>')
+        }
+        }
+        
+        function increment(){
+            document.writeln('<h2>5. Increment Pattern</h2>')
+            // debugger
+            let n=0
+            for( let i = 1; i<=5; i++){
+                for(let j = 1; j<=i; j++){
+                document.writeln(n+=1)
+            }
+            document.writeln('<br>')
+            }
+        }
+
+        // function triangle(){
+            // document.writeln('<h2>6. Right Triangle</h2>')
+            // debugger
+            // for( let i = 5; i>=1; i--){
+            //     for(let j = 1; j<=i; j++){
+            //     document.writeln('*')
+            // }
+            // document.writeln('<br>')
+            // }
+        // }
+
+
+
+        // factorial
+        function factorial(){
+            document.writeln('<h2>7. Factorial Numbers</h2>')
+            // debugger
+            let fact = prompt('Enter Factorial number:')
+            let result = 1
+            for(let i = 1; i<=fact; i++){
+                result *= i
+            }
+            document.writeln(`The Factorial of ${fact} is --- ${result}`)
+        }
+
+
+        // fibonacci
+        // function fibonacci(){
+            // document.writeln('<h2>8. Fibonacci Series</h2>')
+            // debugger
+            // let a = 0
+            // let b = 1
+            // document.writeln(a)
+            // document.writeln(b)
+            // for(let i = 1; i <= 13; i++){
+            //     document.writeln(b++)
+            // } 
+        // }
+       
+
+        let option = prompt('Enter Your Option:\n 1. Number Pattern \n 2. Initial Pattern \n 3. Diagonal Pattern \n 4. Star pattern \n 5. Increment Pattern \n 6. Right Triangle  \n 7. Factorial')
+
+        switch(option){
+            case '1':
+                num()  
+                break
+            case '2':
+                initial()
+                break
+            case '3':
+                diagonal()
+                break
+            case '4':
+                star()
+                break
+            case '5':
+                increment()
+                break
+            case '6':
+                triangle()
+                break
+            case '7':
+                factorial()
+                break
+        }
+    </script>
+</body>
+</html>
