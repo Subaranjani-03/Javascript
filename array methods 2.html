@@ -8,15 +8,46 @@
 <body>
     
     <script>
+        let num = [10,20,30,40,50]
+        let num2 = [80,90,100]
+
+        num.push(60) //add at last
+        console.log(num)
+
+        num.pop() //removes at last
+        console.log(num)
+
+        num.unshift(5) //add at first
+        console.log(num)
+
+        num.shift() //removes at first
+        console.log(num)
+
+        console.log(num.concat(num2)) //concat()
+
+        console.log(num.length) //length()
+
+        console.log(num.join('*')) //join(seperator)
+
+        delete(num[0])
+        console.log(num) //delete()
+
+        console.log(num.toString()) //converts array to string
+
+        console.log(num.at(1)) //to get element using at()
+        console.log(num[3]) // to get element using []
+
+        
+
         //splice - add,remove, update
 
-        let fruits = ['apple' , 'banana' , 'orange' , 'lemon' , 'mango']
+        // let fruits = ['apple' , 'banana' , 'orange' , 'lemon' , 'mango']
 
-        console.log('before deletion : ',fruits)
+        // console.log('before deletion : ',fruits)
 
-        let del = fruits.splice(1)
-        console.log('deleted : ',del)
-        console.log('after deletion : ',fruits)
+        // let del = fruits.splice(1)
+        // console.log('deleted : ',del)
+        // console.log('after deletion : ',fruits)
 
     </script>
 </body>
