@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //string search methods
+        
+        let a = 'hello world hello world'
+        console.log(a.indexOf('world')) //prints the index of first occurance => 6
+        console.log(a.indexOf('bye')) //prints -1 if not found
+
+        console.log(a.lastIndexOf('world')) ////prints the index of first occurance in backward => 18
+
+        console.log(a.search('hello')) //prints index of first match
+
+        console.log(a.match(/llo/)) //search that matches 'llo' in first match.
+        console.log(a.match(/llo/g))
+
+        // console.log(a.matchAll(/llo/)) //doubt
+
+        console.log(a.includes('world')) //true => returns true or false if found or not. case sensitive
+        console.log(a.includes('World')) //false
+
+        console.log(a.startsWith('hel')) //true => checks if it starts with
+        console.log(a.startsWith('hel',12)) //true
+        console.log(a.startsWith('hel',10)) //false
+
+
+        console.log(a.endsWith('rld')) //true => checks if it ends with
+        console.log(a.endsWith('llo',5)) //true
+        console.log(a.endsWith('rld',10)) //false
+
+    </script>
+</body>
+</html>

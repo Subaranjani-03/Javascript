@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        /* string methods:
+                slice()
+                substring()
+                substr()
+        */
+
+
+        let str = 'hello world'
+        //index    012345678910
+
+        //slice(start,end)- supports negative index , end-1
+
+        // console.log(str.slice(0,5)) //0-4
+        // console.log(str.slice(6)) //6 to end
+        // console.log(str.slice(-5)) //-5 to end
+        // console.log(str.slice(-5,-1)) //-5 to -2
+        // console.log(str.slice(4,0)) //no swap
+
+        //substring(start,end)- no negative index => 0
+        // if start>end =>swaps
+
+        // console.log(str.substring(0,8)) //0-7
+        // console.log(str.substring(9,6)) //swaps -> 6-8
+        // console.log(str.substring(-3)) //0
+
+
+        //substr(start,length)- old method, supports negative index, length instead of end()
+        console.log(str.substr(0,8)) //start-0 length-8
+        console.log(str.substr(4,6)) //start-4 length-6
+        console.log(str.substr(-5,3)) //start--5 length-3
+
+
+
+        
+
+
+    </script>
+</body>
+</html>

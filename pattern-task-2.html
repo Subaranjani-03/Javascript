@@ -10,29 +10,47 @@
     <script>
 
         // pattern 1
-        // debugger
-        for(let i = 1; i<=5; i++){
-            for(let j = 5; j>=i; j--){
-                document.writeln(j)
-            }
-            document.writeln('<br>')
-        }
-        document.writeln('<br>')
+        // for(let i = 1; i<=5; i++){
+        //     for(let j = 5; j>=i; j--){
+        //         document.writeln(j)
+        //     }
+        //     document.writeln('<br>')
+        // }
+        // document.writeln('<br>')
         
         
         // pattern 2
-        // debugger
-        for(let i = 5; i>=1; i--){
-            for(let j = 1; j<=i; j++){
-                document.writeln(j)
+        // for(let i = 5; i>=1; i--){
+        //     for(let j = 1; j<=i; j++){
+        //         document.writeln(j)
+        //     }
+        //     document.writeln('<br>')
+        // }
+        // document.writeln('<br>')
+
+
+        // pattern 3
+        // for(let i = 1; i<=5; i++){
+        //     for(let j = 1; j<=5; j++){
+        //         document.writeln(i,j)
+        //     }
+        //     document.writeln('<br>')
+        // }
+        // document.writeln('<br>')
+
+
+        // pattern 4
+        for(let i = 1; i<=5; i++){
+            for(let j = 1; j<=5; j++){
+                if(i==1 || i==5 || j==1 || j==5){
+                    document.writeln(i,j)
+                }
+                else{
+                    document.writeln('&nbsp;&nbsp;&nbsp;&nbsp;')
+                }
             }
             document.writeln('<br>')
         }
-        document.writeln('<br>')
-
-
-        
-        
     </script>
 </body>
 </html>
