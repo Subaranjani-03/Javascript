@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //ARRAY -> []
+
+        //creating array
+        let a = []
+        console.log(a); //empty array
+        
+        let b = [20,10.5,'suba',true,null]
+        console.log(b);
+        
+        //creating array using 'new'
+        let c = new Array(10,20)
+        console.log(c);
+        
+        //accessing elements
+        let arr = [20,10.5,'suba',true,null]
+        console.log(arr[3])
+        console.log(arr[arr.length-1]) //to access last element => arr[5-1] => arr[4] => null
+        console.log(arr[10]) //undefined as there is no element in that index
+
+        //modifying element
+        let mod = [20,10.5,'suba',true,null]
+        console.log(mod)
+        mod[0] = 30
+        mod[3] = false
+        mod[50] = 'hello' //this works, 5-49 index will be empty
+        console.log(mod)
+
+        //delete an element
+        let del = [20,10.5,'suba',true,null]
+        delete del[0]
+        console.log(del);
+        
+        //array destructuring or unpack
+        let marks = [90,80,70,85,95]
+
+        //old method in multiple line
+        let tam = marks[0]
+        let eng = marks[1]
+        let mat = marks[2]
+        let sci = marks[3]
+        let ss = marks[4]
+        console.log(tam,eng,mat,sci,ss)
+
+        //new unpack method in single line
+        let mark = [90,80,70,85,95]
+        let[m1,m2,m3,m4,m5] = mark
+        console.log(m1,m2,m3,m4,m5)
+
+    </script>
+</body>
+</html>

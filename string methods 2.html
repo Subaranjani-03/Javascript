@@ -8,6 +8,43 @@
 <body>
     
     <script>
+        // let a = '    hello    '
+        // let b = 'WELCOME'
+
+        // let c = a.trim().length
+
+        // let c = a.concat(' ',b,' ','hi')
+
+        // let c = a.charAt(4)
+        // let c = b.at(4)
+        // let c = b[3]
+
+        // let c = a.toUpperCase()
+        // let c = b.toLowerCase()
+
+        // let c = a.trimStart()
+        // let c = a.trimEnd()
+        // let c = a.trim()
+
+        // console.log(c)
+
+        let val = '123' //padStart()
+        console.log(val.padStart(10,'x')) //padStart()
+        console.log(val.padEnd(10,'x')) //padEnd()
+
+        console.log(val.repeat(6)) //repeat()
+
+        let para = 'hello welcome hello welcome Hello'
+        console.log(para.replace('hello','hi')) //replace
+        console.log(para.replace(/hello/gi,'hi')) //replace using g and i
+        console.log(para.replaceAll('hello','hi')) //replaceAll
+
+        console.log(para.split('')) //split()
+        console.log(para.split(' ')) //split()
+
+
+
+
         //string search methods
         
         let a = 'hello world hello world'
@@ -26,12 +63,12 @@
         console.log(a.includes('world')) //true => returns true or false if found or not. case sensitive
         console.log(a.includes('World')) //false
 
-        console.log(a.startsWith('hel')) //true => checks if it starts with
+        console.log(a.startsWith('hel')) //true => checks if it starts with based on whole para
         console.log(a.startsWith('hel',12)) //true
         console.log(a.startsWith('hel',10)) //false
 
 
-        console.log(a.endsWith('rld')) //true => checks if it ends with
+        console.log(a.endsWith('rld')) //true => checks if it ends with with based on whole para
         console.log(a.endsWith('llo',5)) //true
         console.log(a.endsWith('rld',10)) //false
 
