@@ -38,16 +38,27 @@
         console.log(num[3]) // to get element using []
 
         
-
+        console.log('--------------')
+        
         //splice - add,remove, update
 
-        // let fruits = ['apple' , 'banana' , 'orange' , 'lemon' , 'mango']
+        let fruits = ['apple' , 'banana' , 'orange' , 'lemon' , 'mango']
 
-        // console.log('before deletion : ',fruits)
+        console.log('before deletion : ',fruits)
 
-        // let del = fruits.splice(1)
+        // let del = fruits.splice(1) //banana is deleted
         // console.log('deleted : ',del)
         // console.log('after deletion : ',fruits)
+
+        // let del1 = fruits.splice(1,2) //from index 1 it deletes 2 fruits
+        // console.log('deleted : ',del1)
+        // console.log('after deletion : ',fruits)
+
+        let del2 = fruits.splice(1,2,'grapes','pineapple','guava') //from index 1 it replaces
+        console.log('deleted : ',del2)
+        console.log('after deletion : ',fruits)
+
+        
 
     </script>
 </body>
