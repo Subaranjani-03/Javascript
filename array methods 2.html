@@ -1,65 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
+  </head>
+  <body>
     <script>
-        let num = [10,20,30,40,50]
-        let num2 = [80,90,100]
+      let num = [10, 20, 30, 40, 50];
+      let num2 = [80, 90, 100];
 
-        num.push(60) //add at last
-        console.log(num)
+      num.push(60); //add at last
+      console.log(num);
 
-        num.pop() //removes at last
-        console.log(num)
+      num.pop(); //removes at last
+      console.log(num);
 
-        num.unshift(5) //add at first
-        console.log(num)
+      num.unshift(5); //add at first
+      console.log(num);
 
-        num.shift() //removes at first
-        console.log(num)
+      num.shift(); //removes at first
+      console.log(num);
 
-        console.log(num.concat(num2)) //concat()
+      console.log(num.concat(num2)); //concat()
 
-        console.log(num.length) //length()
+      console.log(num.length); //length()
 
-        console.log(num.join('*')) //join(seperator)
+      console.log(num.join("*")); //join(seperator)
 
-        delete(num[0])
-        console.log(num) //delete()
+      delete num[0];
+      console.log(num); //delete()
 
-        console.log(num.toString()) //converts array to string
+      console.log(num.toString()); //converts array to string
 
-        console.log(num.at(1)) //to get element using at()
-        console.log(num[3]) // to get element using []
+      console.log(num.at(1)); //to get element using at()
+      console.log(num[3]); // to get element using []
 
-        
-        console.log('--------------')
-        
-        //splice - add,remove, update
+      console.log("--------------");
 
-        let fruits = ['apple' , 'banana' , 'orange' , 'lemon' , 'mango']
+      //splice - add,remove, update
 
-        console.log('before deletion : ',fruits)
+      let fruits = ["apple", "banana", "orange", "lemon", "mango"];
 
-        // let del = fruits.splice(1) //banana is deleted
-        // console.log('deleted : ',del)
-        // console.log('after deletion : ',fruits)
+      console.log("before deletion : ", fruits);
 
-        // let del1 = fruits.splice(1,2) //from index 1 it deletes 2 fruits
-        // console.log('deleted : ',del1)
-        // console.log('after deletion : ',fruits)
+      // let del = fruits.splice(1) //banana is deleted
+      // console.log('deleted : ',del)
+      // console.log('after deletion : ',fruits)
 
-        let del2 = fruits.splice(1,2,'grapes','pineapple','guava') //from index 1 it replaces
-        console.log('deleted : ',del2)
-        console.log('after deletion : ',fruits)
+      // let del1 = fruits.splice(1,2) //from index 1 it deletes 2 fruits
+      // console.log('deleted : ',del1)
+      // console.log('after deletion : ',fruits)
 
-        
-
+      let del2 = fruits.splice(1, 2, "grapes", "pineapple", "guava"); //from index 1 it replaces
+      console.log("deleted : ", del2);
+      console.log("after deletion : ", fruits);
     </script>
-</body>
+  </body>
 </html>
